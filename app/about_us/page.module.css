@@ -3,3 +3,83 @@
   width: 100vw;
   height: 100vh;
 }
+
+.crewContainer, .partnersContainer, .valueContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+}
+
+.crewContainer p, .valueCard p {
+  font-size: 16px;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+
+.crewGrid, .valueGrid {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+}
+
+.crewGrid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.valueGrid {
+  grid-template-columns: repeat(2, 1fr);
+  align-items: stretch;
+  width: 100%;
+  max-width: 900px;
+}
+
+.crewCard, .valueCard, .partnerImage {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.crewCard:hover, .valueCard:hover, .partnerImage:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.crewCard img, .partnerImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: contain;
+  object-position: center;
+  margin: 15px;
+  padding: 15px;
+  border: 2px solid #fff;
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.partnerImage {
+  width: 100px;
+  height: 100px;
+}
+
+.crewCard p, .valueCard p {
+  flex-grow: 1;
+}
+
+.crewCard strong, .valueCard strong {
+  font-size: 18px;
+  color: #fff;
+}
+
+.partnersGrid {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 10px; 
+  padding: 10px;
+}
