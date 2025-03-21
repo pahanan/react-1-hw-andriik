@@ -24,11 +24,14 @@ export const Footer = () => {
       </div> */}
       {/* Docs for the Link: https://nextjs.org/docs/pages/api-reference/components/link */}
 
-      {/* TASK - React 1 week 1 */}
+      {/* TASK - React 1 week 1 * DONE/}
       {/* Add a new list item for LINKEDIN */}
       <div className={styles.footerLinks}>
         <h3>Follow us</h3>
         <ul className={styles.footerList}>
+          <li>
+            <a href="https://linkedin.com">LinkedIn</a>
+          </li>
           <li>
             <a href="https://facebook.com">Facebook</a>
           </li>
