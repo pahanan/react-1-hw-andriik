@@ -26,7 +26,7 @@ export const Crew = () => {
           <OurPartners/>
         </section>
 
-         {/* TASK - React 1 week 1 DONE*/}
+         {/* TASK - React 1 week 1 DONE.*/}
          {/* Add in the "OurPartners" component here */}
       </main>
     </div>
