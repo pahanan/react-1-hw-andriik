@@ -3,7 +3,7 @@ import styles from './page.module.css';
 
 
 const OurPartners = () => {
-  // TASK - React 1 week 1 DONE
+  // TASK - React 1 week 1 DONE.
   // Create the "Our Crew section"
   // Use the descriptions provided in /app/about_us/README.md
   // Use the pictures from /public/crew
