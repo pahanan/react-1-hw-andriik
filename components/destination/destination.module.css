@@ -57,9 +57,19 @@
   margin: var(--spacing-16) 0;
 }
 
+.wishlistItem button, .addWishlistItem button{
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 .addWishlistItem {
   border: 1px solid var(--border-color);
-  width: 200px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 240px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -69,16 +79,90 @@
 }
 
 .addWishlistItem p {
-  margin-block-end: var(--spacing-20);
+  margin-block-end: var(--spacing-12);
+  font-weight: bold;
+  color: white;
+  font-size: 1.1rem;
 }
 
 .addWishlistItem label {
   margin: 0;
-  font-size: small;
+  font-size: 0.85rem;
+  color: #ccc;
 }
 
-.addWishlistItem input, 
+.addWishlistItem input,
 .addWishlistItem select {
-  height: 30px;
-  margin-block-end: var(--spacing-20);
+  height: 34px;
+  margin-block-end: var(--spacing-16);
+  border-radius: 8px;
+  border: 1px solid #999;
+  padding: 4px 8px;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.addWishlistItem button {
+  background-color: #0066ff;
+  padding: 8px 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.addWishlistItem button:hover {
+  background-color: #004dcc;
+}
+
+
+.addWishlistItem {
+  border: 1px solid var(--border-color);
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 240px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
+  margin: var(--spacing-20);
+  padding: var(--spacing-20);
+}
+
+.addWishlistItem p {
+  margin-block-end: var(--spacing-12);
+  font-weight: bold;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.addWishlistItem label {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.addWishlistItem input,
+.addWishlistItem select {
+  height: 34px;
+  margin-block-end: var(--spacing-16);
+  border-radius: 8px;
+  border: 1px solid #999;
+  padding: 4px 8px;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.addWishlistItem button {
+  background-color: #0066ff;
+  padding: 8px 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.addWishlistItem button:hover {
+  background-color: #004dcc;
 }

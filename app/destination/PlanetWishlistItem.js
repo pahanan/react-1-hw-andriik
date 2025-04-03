@@ -1,3 +1,5 @@
+import styles from '@/components/destination/destination.module.css';
+
 const PlanetWishlistItem = ({
     name,
     onRemove,
@@ -7,7 +9,7 @@ const PlanetWishlistItem = ({
       <div className={styles.wishlistItem}>
         <img className={styles.wishlistItemThumbnail} src={thumbnail} alt="" />
         <b>{name.toUpperCase()}</b>
-        <button onClick={onRemove}>remove</button>
+        <button onClick={onRemove}>Remove</button>
       </div>
     );
   }

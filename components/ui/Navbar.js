@@ -46,7 +46,7 @@ export const Navbar = () => {
           {/* Create a <NavItem> component, which accepts the following:  */}
           {/* title, link, isActive  */}
 
-          {navbarItems.map((item, index) => (
+          {navbarItems.map((item) => (
             <NavItem
               key={item.link}
               title={item.title}
@@ -55,7 +55,7 @@ export const Navbar = () => {
             />
           ))}
 
-          {/* TASK - React 1 week 3 */}
+          {/* TASK - React 1 week 3 DONE*/}
           {/* replace repeating content by using navbarItems.map(() => <NavLink />) */}
         </ul>
       </nav>
