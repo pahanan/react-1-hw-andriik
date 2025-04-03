@@ -1,36 +1,14 @@
 "use client";
 import PlanetWishlistItem from './PlanetWishlistItem';
-
+import PlanetCard from './PlanetCard';
+import React from 'react';
 import { useState } from 'react';
-
 import styles from '@/components/destination/destination.module.css';
 import { AddWishlistItem } from '@/components/destination/AddWishlistItem';
 
 // TASK - React 1 week 2 DONE
 // Move this to its own file
-const PlanetCard = ({ name, description, thumbnail, isSelected, onAddOrRemovePlanet }) => {
-  return (
-    <div className={styles.planetCard}>
-      <img className={styles.planetThumbnail} src={thumbnail} alt={name} />
-      <div className={styles.planetDescription}>
-        <h2>{name.toUpperCase()} {isSelected ? "- SELECTED" : ""}</h2>
-        <p>{description}</p>
-      </div>
-      <button
-        style={{
-          backgroundColor: isSelected ? 'white' : 'rgba(0, 0, 0, 0.3)',
-          color: isSelected ? '#000' : '#fff',
-          border: isSelected ? '2px solid black' : '2px solid white',
-          transition: '0.3s ease',
-        }}
-        className="roundButton"
-        onClick={() => onAddOrRemovePlanet(name)}
-      >
-        {isSelected ? "REMOVE" : "ADD PLANET"}
-      </button>
-    </div>
-  );
-};
+
 
 export const Destinations = () => {
   const [selectedPlanets, onAddPlanet] = useState([]);
@@ -105,16 +83,16 @@ export const Destinations = () => {
           />
           <PlanetCard
             name="MOON"
-            description="Mars, the Red Planet, is a barren yet fascinating world with vast deserts, towering volcanoes, and the deepest canyon in the solar system. 
-            As humanity’s next frontier, Mars invites us to dream of colonization and the possibilities of life beyond Earth."
+            description="Our closest celestial neighbor, the Moon, is a silent witness to Earth's history. With its stunning craters and desolate landscapes, 
+            the Moon offers a unique glimpse into space exploration's past and future, making it a perfect destination for lunar adventurers."        
             thumbnail="/destination/image-moon.png"
             isSelected={selectedPlanets.includes("MOON")}
             onAddOrRemovePlanet={onAddOrRemovePlanet}
           />
           <PlanetCard
             name="MARS"
-            description="Our closest celestial neighbor, the Moon, is a silent witness to Earth's history. With its stunning craters and desolate landscapes, 
-            the Moon offers a unique glimpse into space exploration's past and future, making it a perfect destination for lunar adventurers."
+            description="Mars, the Red Planet, is a barren yet fascinating world with vast deserts, towering volcanoes, and the deepest canyon in the solar system. 
+            As humanity’s next frontier, Mars invites us to dream of colonization and the possibilities of life beyond Earth."
             thumbnail="/destination/image-mars.png"
             isSelected={selectedPlanets.includes("MARS")}
             onAddOrRemovePlanet={onAddOrRemovePlanet}

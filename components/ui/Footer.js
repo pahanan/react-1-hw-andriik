@@ -4,6 +4,34 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 import styles from './Footer.module.css';
 
+const socials = [
+  {
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/",
+    icon: "/socialmedia/linkedin.png",
+  },
+  {
+    title: "Facebook",
+    url: "https://www.facebook.com/",
+    icon: "/socialmedia/facebook.png",
+  },
+  {
+    title: "Instagram",
+    url: "https://www.instagram.com/",
+    icon: "/socialmedia/instagram.png",
+  },
+  {
+    title: "TikTok",
+    url: "https://www.tiktok.com/",
+    icon: "/socialmedia/tiktok.png",
+  },
+  {
+    title: "Google",
+    url: "https://www.google.com/",
+    icon: "/socialmedia/google.png",
+  },
+];
+
 const SocialMediaItem = ({ url, title, icon }) => (
   <li>
     <a
@@ -56,13 +84,11 @@ export const Footer = () => {
       <div className={styles.footerLinks}>
         <h3>Follow us</h3>
         <ul className={styles.footerList}>
-          <li>
-          <SocialMediaItem url="https://linkedin.com" title="LinkedIn" icon="/socialmedia/linkedin.png" />
-          <SocialMediaItem url="https://facebook.com" title="Facebook" icon="/socialmedia/facebook.png" />
-          <SocialMediaItem url="https://instagram.com" title="Instagram" icon="/socialmedia/instagram.png" />
-          <SocialMediaItem url="https://tiktok.com" title="Tiktok" icon="/socialmedia/tiktok.png" />
-          <SocialMediaItem url="https://google.com" title="Google" icon="/socialmedia/google.png" />
-          </li>
+          {socials.map((social) => (
+            <li key={social.url}>
+              <SocialMediaItem {...social} />
+            </li>
+          ))}
           {/* TASK - React 1 week 2 DONE*/}
           {/* Create a <SocialMediaItem /> component and replace all of the list items! */}
           {/* it should accept the following props */}

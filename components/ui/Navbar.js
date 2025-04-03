@@ -20,7 +20,7 @@ const navbarItems = [
   }
 ];
 
-const NavItem = ({ title, link, number, isActive }) => (
+const NavItem = ({ title, link, isActive }) => (
   <li className={classNames(styles.navbarLinks, {
     [styles.isLinkActive]: isActive,
   })}>
